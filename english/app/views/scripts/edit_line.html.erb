@@ -3,7 +3,7 @@
   <%= f.label :sentence %>
   <%= f.text_field :sentence, :class => 'long-field' %>
   <%= f.label :id %>
-  <%= f.text_field :id %>
+  <%= f.text_field :id ,:readonly => true  %>
   <br>
   <%= f.submit 'Edit' %>
 <% end %>

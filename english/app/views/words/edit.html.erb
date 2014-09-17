@@ -1,10 +1,12 @@
 
 <div class="box pure-table pure-table-bordered pure-form">
-<%= form_for Word.new,:url=>{:action => :create} do |f| %>
+<%= form_for @word,:url=>{:action => :update} do |f| %>
   <%= f.label :voc %>
   <%= f.text_field :voc, :class => 'long-field' %><br>
   <%= f.label :mean %>
   <%= f.text_field :mean, :class => 'long-field' %><br>
+  <%= f.label :id %>
+  <%= f.text_field :id, :readonly => true %><br>
   <%= f.submit %>
 <% end %>
 </div>
