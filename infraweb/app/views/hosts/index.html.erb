@@ -1,0 +1,22 @@
+<table>
+	
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Hostname</th>
+			<th>IP Address</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @hosts.each do |host| %>
+		<tr>
+			<th><%= host.id %></th>
+                        <th><%= host.hostname %></th>
+                        <th><%= host.ipaddress %></th>
+		</tr>
+		<% end %>
+	</tbody>
+
+
+</table>

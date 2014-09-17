@@ -1,0 +1,7 @@
+<%= form_for Host.new do |f| %>
+  <%= f.label :hostname %>
+  <%= f.text_field :hostname %>
+  <%= f.label :ipaddress %>
+  <%= f.text_field :ipaddress %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,39 @@
+
+<div class="box pure-table pure-table-bordered pure-form">
+<%= form_for Word.new,:url=>{:action => :create} do |f| %>
+  <%= f.label :voc %>
+  <%= f.text_field :voc, :class => 'long-field' %><br>
+  <%= f.label :mean %>
+  <%= f.text_field :mean, :class => 'long-field' %><br>
+  <%= f.submit %>
+<% end %>
+</div>
+
+
+
+<div class="box">
+<table class="pure-table pure-table-horizontal">
+	
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Word</th>
+			<th>Meanings</th>
+			<th>Edit</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @words.each do |word| %>
+		<tr>
+			<th><%= word.id %></th>
+                        <th align="left"><%= word.voc %></th>
+                        <th><%= word.mean %></th>
+			<th>Edit</th>
+		</tr>
+		<% end %>
+	</tbody>
+
+
+</table>
+</div>

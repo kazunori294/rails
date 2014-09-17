@@ -1,0 +1,11 @@
+<div class="box pure-table pure-table-bordered pure-form">
+<%= form_for Article.new,:url=>{:action => :create} do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :class => 'long-field' %><br>
+  <%= f.label :audio %>
+  <%= f.text_field :audio, :class => 'long-field' %><br>
+  <%= f.label :script %>
+  <%= f.text_field :script, :class => 'long-field' %><br><br>
+  <%= f.submit %>
+<% end %>
+</div>

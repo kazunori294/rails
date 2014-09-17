@@ -1,0 +1,30 @@
+<div class="menu">
+<%= button_to "New Article", :action => "new" %>
+</div>
+
+<div class="box">
+<table class="pure-table pure-table-horizontal">
+	
+	<thead>
+		<tr>
+			<th>Article Id</th>
+			<th>Title</th>
+			<th>Audio</th>
+			<th>Script</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @articles.each do |article| %>
+		<tr>
+			<th><%= article.id %></th>
+                        <th align="left"><a href = '/scripts/<%= article.id %>/line'><%= article.title %></a></th>
+                        <th><a href = "<%= article.audio %>">Link</a></th>
+			<th><a href = "<%= article.script %>">Link</a></th>
+		</tr>
+		<% end %>
+	</tbody>
+
+
+</table>
+</div>

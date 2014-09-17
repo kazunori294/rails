@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  voc: MyString
+  mean: MyString
+
+two:
+  voc: MyString
+  mean: MyString

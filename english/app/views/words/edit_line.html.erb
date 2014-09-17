@@ -1,0 +1,36 @@
+<div class="box pure-table pure-table-bordered pure-form">
+<%= form_for @line, :url=>{:action => :update_line} do |f| %>
+  <%= f.label :sentence %>
+  <%= f.text_field :sentence, :class => 'long-field' %>
+  <%= f.label :id %>
+  <%= f.text_field :id %>
+  <br>
+  <%= f.submit 'Edit' %>
+<% end %>
+</div>
+
+
+<div class="box">
+
+<table class="pure-table pure-table-horizontal">
+
+        <thead>
+                <tr>
+                        <th>Line</th>
+                        <th>Sentence</th>
+                        <th>Edit</th>
+                </tr>
+        </thead>
+
+        <tbody>
+                <% @lines.each do |line| %>
+                <tr>
+                        <th><%= line.id %></th>
+                        <th align="left"><%= line.sentence %></th>
+                        <th><a href ="/scripts/<%= line.article_id %>/line/<%= line.id %>/edit">edit</a></th>
+                </tr>
+                <% end %>
+        </tbody>
+
+
+</table>
