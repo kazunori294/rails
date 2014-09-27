@@ -16,12 +16,14 @@
 		<tr>
 			<th>Sentence</th>
 			<th>Edit</th>
+			<th>ID</th>
 		</tr>
 	</thead>
 
 	<tbody>
 		<% @lines.each do |line| %>
 		<tr>
+			<th><%= line.id %></th>
                         <th align="left"><%= line.sentence %></th>
 			<th><a href ="/scripts/<%= line.article_id %>/line/<%= line.id %>/edit">edit</a></th>
 		</tr>
